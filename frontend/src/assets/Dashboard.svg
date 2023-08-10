@@ -1,0 +1,13 @@
+<svg id="Dashboard" data-name="Dashboard" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a0a0a0;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-1" width="13" height="13" rx="3"/>
+  <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-1" width="13" height="13" rx="3" transform="translate(17)"/>
+  <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="13" height="13" rx="3" transform="translate(17 17)"/>
+  <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-1" width="13" height="13" rx="3" transform="translate(0 17)"/>
+</svg>

@@ -1,7 +1,7 @@
 import contractAbi from "./constants/Contract";
 import Web3 from 'web3';
 
-export class Blockchain{
+export default class Blockchain{
     constructor(){
         this.web3 = new Web3(process.env.REACT_APP_BLOCKCHAIN_NETWORK);;
         this.contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
@@ -15,6 +15,7 @@ export class Blockchain{
         try {
             const data = await this.contractObject.methods.getData(index).call();
             console.log('Sensor Data:', data);
+            return data;
         } catch (error) {
             console.error('Error:', error);
         }

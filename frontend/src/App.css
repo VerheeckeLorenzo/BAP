@@ -58,6 +58,10 @@ LOGO
   margin-right: 2rem;
 }
 
+.c-grid__aside *{
+  transition: all 0.2s ease-in-out;
+}
+
 .c-grid__aside ul{
   list-style: none;
   padding: 0;
@@ -134,13 +138,18 @@ LOGO
   grid-area: main;
   background-color: var(--dark);
   color: var(--white);
+  /* overflow-y:auto; */
 }
 
+/*
+* DASHBOARD
+*/
 .c-dashboard{
   margin-top: 2.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
+  
 }
 
 .c-dashboard__item{
@@ -148,6 +157,85 @@ LOGO
   border-radius: 3px;
   padding: 1rem;
   color: var(--white);
+}
+
+/*
+* TRACKER
+*/
+.c-tracker__map{
+  margin-top:2.5rem;
+  height:100%;
+  display:flex;
+  gap: 4rem;
+}
+
+.c-tracker__filter-title{
+  font-size:1rem;
+  color:var(--light-gray);
+  margin: 2rem 0 0.5rem 0;
+}
+
+.c-tracker__filter-options{
+  display:flex;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.c-tracker__filter-label{
+  display:block;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  background-color: var(--light-dark);
+  transition: all 0.2s ease-in-out;
+}
+
+.c-tracker__filter-label:hover{
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.c-tracker__filter-label:hover .c-tracker__filter-count{
+  background-color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.c-tracker__filter-input[type=checkbox],
+.c-tracker__filter-input[type=radio] {
+  display: none;
+}
+
+.c-tracker__filter-input:checked + .c-tracker__filter-label {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.c-tracker__filter-input:checked + .c-tracker__filter-label .c-tracker__filter-count{
+  background-color: var(--secondary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.c-tracker__filter-count{
+  display: inline-block;
+  background-color: var(--card-gray);
+  padding: 0.25rem;
+  border-radius: 3px;
+  width: 1.625rem;
+  height: 1.625rem;
+  text-align: center;
+  margin-left: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.c-tracker__search-input[type="text"]{
+  padding: 0.75rem 1rem;
+}
+
+.c-tracker__search-input[type="text"]::before{
+  content: url(./assets/search.svg);
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
 }
 
 /*

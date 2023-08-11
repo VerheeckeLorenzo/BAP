@@ -4,9 +4,13 @@ import { Dashboard, EventLog, Tracker } from './pages/collection';
 import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
 
+import { Test } from './pages/Test';
+
 const App = () => {
+
   return (
       <div className="c-grid">
+        {/* <Test/> */}
         <Header/>
         <Navigation/>
         <Routes>

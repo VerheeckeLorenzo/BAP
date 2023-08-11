@@ -2,6 +2,7 @@
   --white: #fafafa;
   --primary-color: #426BFD;
   --secondary-color: #6889FD;
+  --tertiary-color: #9AB0FD;
   --dark: #000;
   --light-dark: #191919;
   --light-gray: #A0A0A0;
@@ -16,6 +17,49 @@
 ::selection {
   color: #fafafa;
   background: #426BFD;
+}
+
+/* 
+Make placeholder not go uppercase (for Tracker component)
+found: https://stackoverflow.com/questions/25180140/make-input-value-uppercase-in-css-without-affecting-the-placeholder
+*/
+::-webkit-input-placeholder { /* WebKit browsers */
+  text-transform: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  text-transform: none;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  text-transform: none;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  text-transform: none;
+}
+::placeholder { /* Recent browsers */
+  text-transform: none;
+}
+
+/*
+Custom scrollbar
+*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--card-gray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
 
 body,html {

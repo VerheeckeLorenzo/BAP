@@ -21,4 +21,14 @@ export default class Blockchain{
         }
     }
 
+    async getDataCount() {
+        try {
+            const data = await this.contractObject.methods.getDataCount().call();
+            console.log('Data Count:', data);
+            return data;
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
 }

@@ -3,7 +3,7 @@ export const markers = [
       coord: [51.5074, -0.1278],
       title: 'London',
       popup: 'This is London',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'LND123',
       companyName: 'FreshFarms Co.'
     },
@@ -19,7 +19,7 @@ export const markers = [
       coord: [22.3964, 114.1095],
       title: 'Hong Kong',
       popup: 'Explore Hong Kong',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'HKG789',
       companyName: 'GlobalGrains'
     },
@@ -35,7 +35,7 @@ export const markers = [
       coord: [35.6895, 139.6917],
       title: 'Tokyo',
       popup: 'Discover Tokyo',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'TKY202',
       companyName: 'GlobalGrains'
     },
@@ -51,7 +51,7 @@ export const markers = [
       coord: [48.8566, 2.3522],
       title: 'Paris',
       popup: 'City of Lights',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'PRS404',
       companyName: 'FreshFarms Co.'
     },
@@ -59,7 +59,7 @@ export const markers = [
       coord: [55.7558, 37.6173],
       title: 'Moscow',
       popup: 'Explore Moscow',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'MSC505',
       companyName: 'GlobalGrains'
     },
@@ -67,7 +67,7 @@ export const markers = [
       coord: [-34.6037, -58.3816],
       title: 'Buenos Aires',
       popup: 'Discover Buenos Aires',
-      status: 'hold',
+      status: 'transit',
       orderCode: 'BUE606',
       companyName: 'Brananas'
     },
@@ -75,7 +75,7 @@ export const markers = [
       coord: [33.6844, -117.8265],
       title: 'Long Beach',
       popup: 'Long Beach, California',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'LBC707',
       companyName: 'GlobalGrains'
     },
@@ -91,7 +91,7 @@ export const markers = [
       coord: [35.6892, 139.6910],
       title: 'Yokohama',
       popup: 'Explore Yokohama',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'YOK909',
       companyName: 'FreshFarms Co.'
     },
@@ -107,7 +107,7 @@ export const markers = [
       coord: [19.4326, -99.1332],
       title: 'Mexico City',
       popup: 'Visit Mexico City',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'MEX1111',
       companyName: 'GlobalGrains'
     },
@@ -115,7 +115,7 @@ export const markers = [
       coord: [-37.8136, 144.9631],
       title: 'Melbourne',
       popup: 'Explore Melbourne',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'MEL1212',
       companyName: 'FreshFarms Co.'
     },
@@ -131,7 +131,7 @@ export const markers = [
       coord: [60.1695, 24.9354],
       title: 'Helsinki',
       popup: 'Helsinki, Finland',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'HEL1414',
       companyName: 'FreshFarms Co.'
     },
@@ -147,7 +147,7 @@ export const markers = [
       coord: [55.7558, 37.6176],
       title: 'Saint Petersburg',
       popup: 'Visit Saint Petersburg',
-      status: 'transit',
+      status: 'hold',
       orderCode: 'SPB1616',
       companyName: 'GlobalGrains'
     }

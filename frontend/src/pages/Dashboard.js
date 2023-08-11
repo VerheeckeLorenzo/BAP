@@ -1,20 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import Blockchain from '../utils/Blockchain';
+import { LineChart } from '../utils/LineChart';
 
 export const Dashboard = () =>{
-  const [temperature, setTemperature] = useState('');
-  const [ldr, setLDR] = useState('');
-  const [humidity, setHumidity] = useState('');
+  const [dataPoints, setDataPoints] = useState([]);
 
   useEffect(() => {
-      const blockchain = new Blockchain();
+    const blockchain = new Blockchain();
 
-      blockchain.getData(0).then(data => {
-        if(!data) return console.log('No data found');
-        setTemperature(data[0].toString());
-        setLDR(data[1].toString());
-        setHumidity(data[2].toString());
-      });
+    blockchain.getDataCount().then(dataCount => {
+      const fetchData = async () => {
+        const points = [];
+        for (let i = 0; i < dataCount; i++) {
+          const data = await blockchain.getData(i);
+          if (data) {
+            const temperature = data[0].toString();
+            const ldr = data[1].toString();
+            const humidity = data[2].toString();
+            const timestamp = new Date(data[3].toString() * 1000).toString();
+            
+            points.push({ temperature, ldr, humidity, timestamp });
+          }
+        }
+        setDataPoints(points);
+      };
+
+      fetchData();
+    });
   }, []);
     return (
         <main className="c-grid__main">
@@ -26,32 +38,38 @@ export const Dashboard = () =>{
               <h2 className="c-dashboard__title">
                 Temperature
               </h2>
-              <p className="c-dashboard__value">
-              {temperature}°C
-              </p>
+              {dataPoints.length > 0 ? (
+              <LineChart dataPoints={dataPoints} sensorType={'Temperature'}/>
+                ) : (
+                  <p>Loading data...</p>
+                )}
             </div>
             <div className="c-dashboard__item">
               <h2 className="c-dashboard__title">
                 Light Intensity
               </h2>
-              <p className="c-dashboard__value">
-              {ldr}%
-              </p>
+              {dataPoints.length > 0 ? (
+              <LineChart dataPoints={dataPoints} sensorType={'Light Intensity'}/>
+              ) : (
+                <p>Loading data...</p>
+              )}
             </div>
             <div className="c-dashboard__item">
               <h2 className="c-dashboard__title">
                 Humidity
               </h2>
-              <p className="c-dashboard__value">
-              {humidity}%
-              </p>
+              {dataPoints.length > 0 ? (
+              <LineChart dataPoints={dataPoints} sensorType={'Humidity'}/>
+              ) : (
+                <p>Loading data...</p>
+              )}
             </div>
             <div className="c-dashboard__item u-grid-2">
               <h2 className="c-dashboard__title">
-                Temperature
+                Overview
               </h2>
               <p className="c-dashboard__value">
-                25°C
+                Test
               </p>
             </div>
           </div>

@@ -196,7 +196,7 @@ LOGO
 }
 
 .c-tracker__filter-label:hover .c-tracker__filter-count{
-  background-color: var(--primary-color);
+  background-color: var(--tertiary-color);
   transition: all 0.2s ease-in-out;
 }
 
@@ -227,15 +227,23 @@ LOGO
   transition: all 0.2s ease-in-out;
 }
 
-.c-tracker__search-input[type="text"]{
-  padding: 0.75rem 1rem;
+.c-tracker__search{
+  position: relative;
 }
 
-.c-tracker__search-input[type="text"]::before{
+.c-tracker__search-input[type="text"]{
+  padding: 0.75rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform:uppercase;
+}
+
+.c-tracker__search-icon{
   content: url(./assets/search.svg);
   position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
+  top: 50%;
+  right: 0.5rem; /* Adjust the value to control the distance from the right edge */
+  transform: translateY(-50%); /* Vertically center the icon */
 }
 
 /*

@@ -131,7 +131,7 @@ LOGO
 
 
 /*
-* MAIN
+* MAIN GRIDS
 */
 .c-grid__main{
   padding: 2.5rem;
@@ -149,7 +149,6 @@ LOGO
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
-  
 }
 
 .c-dashboard__item{
@@ -244,6 +243,75 @@ LOGO
   top: 50%;
   right: 0.5rem; /* Adjust the value to control the distance from the right edge */
   transform: translateY(-50%); /* Vertically center the icon */
+}
+
+
+/*
+* EVENTS
+*/
+.c-events{
+  display:grid;
+  padding: 2.5rem;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+  "title"
+  "events";
+}
+
+.c-events__title{
+  grid-area:title;
+  margin-bottom: 4rem;
+}
+
+.c-events__table-container{
+  grid-area:events;
+  max-height: 76vh;
+  overflow-y: auto;
+  border-radius: 3px;
+}
+
+.c-events__table{
+  width: 100%;
+  position: relative;
+  border-collapse: collapse;
+  border-spacing: 0 0.25rem;
+}
+
+.c-events__table-row{
+  border-bottom: 1px solid var(--card-gray);
+}
+
+.c-events__table th{
+  position: sticky;
+  top: 0;
+  text-align: left;
+  padding: 1rem;
+  background-color: var(--card-gray);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.c-events__table-row td{
+  padding: 2rem 1rem;
+  background-color: var(--dark);
+  transition: all 0.2s ease-in-out;
+}
+
+.c-events__table-row:hover td{
+  background-color: #1A1414;
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.c-events__table-row>td:first-child{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.c-events__table-row>td:last-child{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 /*

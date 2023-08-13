@@ -17,6 +17,7 @@ let data;
 
 export const LineChart = ({ dataPoints, sensorType }) => {
     const labels = dataPoints.map((dataPoint) => {
+      console.log(dataPoint)
       const timestamp = new Date(dataPoint.timestamp);
       const hours = timestamp.getHours();
       const minutes = timestamp.getMinutes();

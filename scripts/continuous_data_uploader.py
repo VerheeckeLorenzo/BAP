@@ -120,7 +120,7 @@ contract_abi = [
         "type": "function"
     }
 ]
-contract_address = '0x89C438058f48F2E50635B24B16BBa8ed45dED0Bb'  # Your contract address
+contract_address = '0x54D5BB92AD01b7691c27079B2bb33a3837DEB8Ed'  # Your contract address
 
 contract = web3.eth.contract(address=contract_address, abi=contract_abi)
 

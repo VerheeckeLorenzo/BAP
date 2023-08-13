@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Blockchain from '../utils/Blockchain';
+import Blockchain from '../utils/classes/Blockchain';
 import { LineChart } from '../utils/LineChart';
 
 export const Dashboard = () =>{
@@ -7,27 +7,24 @@ export const Dashboard = () =>{
 
   useEffect(() => {
     const blockchain = new Blockchain();
-
-    blockchain.getDataCount().then(dataCount => {
-      const fetchData = async () => {
+    
+    const fetchDataPoints = async () => {
+        const dataCount = await blockchain.getDataCount();
         const points = [];
+        console.log(dataCount);
         for (let i = 0; i < dataCount; i++) {
-          const data = await blockchain.getData(i);
-          if (data) {
-            const temperature = data[0].toString();
-            const ldr = data[1].toString();
-            const humidity = data[2].toString();
-            const timestamp = new Date(data[3].toString() * 1000).toString();
-            
-            points.push({ temperature, ldr, humidity, timestamp });
-          }
+            const data = await blockchain.getData(i);
+            if (data) {
+              console.log(data);
+                points.push(data);
+            }
         }
-        setDataPoints(points);
-      };
 
-      fetchData();
-    });
-  }, []);
+        setDataPoints(points);
+    };
+
+    fetchDataPoints();
+}, []);
     return (
         <main className="c-grid__main">
           <h1 className='c-title'>

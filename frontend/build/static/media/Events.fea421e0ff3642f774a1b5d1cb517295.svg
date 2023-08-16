@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.289" height="33.164" viewBox="0 0 30.289 33.164">
+  <defs>
+    <style>
+      .cls-3, .cls-5 {
+        fill: none;
+        stroke: #a0a0a0;
+      }
+
+      .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Events" data-name="Events" transform="translate(-39.856 -14.394)">
+    <g id="Icon_feather-box" data-name="Icon feather-box" transform="translate(37 12.938)">
+      <path id="Path_6" data-name="Path 6" class="cls-3" d="M31.5,24V12A3,3,0,0,0,30,9.4l-10.5-6a3,3,0,0,0-3,0L6,9.4A3,3,0,0,0,4.5,12V24A3,3,0,0,0,6,26.595l10.5,6a3,3,0,0,0,3,0l10.5-6A3,3,0,0,0,31.5,24Z"/>
+      <path id="Path_7" data-name="Path 7" class="cls-3" d="M4.905,10.44,18,18.015,31.095,10.44"/>
+      <path id="Path_8" data-name="Path 8" class="cls-3" d="M18,33.12V18"/>
+    </g>
+    <path id="Path_9" data-name="Path 9" class="cls-5" d="M48.457,19.086,61.58,27.457"/>
+  </g>
+</svg>

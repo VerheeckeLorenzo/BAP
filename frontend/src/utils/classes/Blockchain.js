@@ -5,7 +5,7 @@ import Event from "./Event";
 
 export default class Blockchain{
     constructor(){
-        this.web3 = new Web3(process.env.REACT_APP_BLOCKCHAIN_NETWORK);;
+        this.web3 = new Web3(process.env.REACT_APP_BLOCKCHAIN_NETWORK);
         this.contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
         this.contractAbi = contractAbi;
         this.contractObject = new this.web3.eth.Contract(contractAbi, this.contractAddress);

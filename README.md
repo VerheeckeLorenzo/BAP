@@ -2,28 +2,11 @@
 Bachelor's thesis by Lorenzo Verheecke in order to graduate as bachelor Graphical & Digital Media from the Artevelde University of Applied Sciences.
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Some text about the project
+I developed an application that takes data from a local blockchain, hosted by Ganache, and displays it on a dashboard application.
 
 
-
-
-### Built With
-
-* [![React][React.js]][React-url]
-
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -36,41 +19,22 @@ Sensors:
 - LDR
 - MCP3008 (To read analog data of the LDR)
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+NPM/Node
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Download [Ganache](https://trufflesuite.com/ganache/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+2. Start a local blockchain network in Ganache
 
+3. Clone this repo
 
+4. Check if you have the contract in /build
 
-<!-- USAGE EXAMPLES -->
-## Usage
+5. In /frontend, change the .env.example to .env and fill in the details. Also run npm install!
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+6. Set up your RPI, clone (this repo)[https://github.com/VerheeckeLorenzo/BAP-rpi] and run the server.
 
+7. Run /scripts/continuous_data_upload.py on your laptop.
 
-
-
-
-
-
-[React-url]: https://reactjs.org/
+8. Succes!

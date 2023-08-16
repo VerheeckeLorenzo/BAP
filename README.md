@@ -33,7 +33,7 @@ NPM/Node
 
 5. In /frontend, change the .env.example to .env and fill in the details. Also run npm install!
 
-6. Set up your RPI, clone (this repo)[https://github.com/VerheeckeLorenzo/BAP-rpi] and run the server.
+6. Set up your RPI, clone [this repo](https://github.com/VerheeckeLorenzo/BAP-rpi) and run the server.
 
 7. Run /scripts/continuous_data_upload.py on your laptop.
 

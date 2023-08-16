@@ -25,14 +25,16 @@ NPM/Node
 
 1. Download [Ganache](https://trufflesuite.com/ganache/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+2. Start a local blockchain network in Ganache
 
+3. Clone this repo
 
+4. Check if you have the contract in /build
 
-<!-- USAGE EXAMPLES -->
-## Usage
+5. In /frontend, change the .env.example to .env and fill in the details. Also run npm install!
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+6. Set up your RPI, clone (this repo)[https://github.com/VerheeckeLorenzo/BAP-rpi] and run the server.
 
+7. Run /scripts/continuous_data_upload.py on your laptop.
 
 8. Succes!

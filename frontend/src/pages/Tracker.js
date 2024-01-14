@@ -3,7 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { markers } from "../utils/constants/Markers";
 import { Icon } from "leaflet";
 import MarkerIcon from "../assets/Marker.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Blockchain from "../utils/classes/Blockchain";
 
 export const Tracker = () => {
   const customIcon = new Icon({
@@ -61,6 +62,29 @@ export const Tracker = () => {
 
     return statusMatch && supplierMatch & searchTermMatch;
   });
+
+  const [dataPoints, setDataPoints] = useState([]);
+
+  useEffect(() => {
+    const blockchain = new Blockchain();
+    
+    const fetchDataPoints = async () => {
+        const dataCount = await blockchain.getDataCount();
+        const points = [];
+        console.log(dataCount);
+        for (let i = 0; i < dataCount; i++) {
+            const data = await blockchain.getData(i);
+            if (data) {
+                points.push(data);
+            }
+        }
+
+        setDataPoints(points);
+    };
+
+    fetchDataPoints();
+}, []);
+
 
   return (
     <main className="c-grid__main">
@@ -195,7 +219,17 @@ export const Tracker = () => {
           />
           {filteredMarkers.map((marker, index) => (
             <Marker key={index} position={marker.coord} icon={customIcon}>
-              <Popup>{marker.title}</Popup>
+              <Popup>
+              {marker.title}
+              {marker.title === 'Buenos Aires' && dataPoints.length > 0 && (
+                  <div>
+                    {/* Replace these lines with your actual data structure */}
+                    Temperature: {dataPoints[dataPoints.length - 1].temperature}<br></br>
+                    Humidity: {dataPoints[dataPoints.length - 1].humidity}<br></br>
+                    Light: {dataPoints[dataPoints.length - 1].ldr}
+                  </div>
+                )}
+              </Popup>
             </Marker>
           ))}
         </MapContainer>

@@ -147,4 +147,5 @@ while True:
         print(f'Error: {e}')
 
     # Wait for n minutes before fetching and uploading data again
-    time.sleep(300)
+    time.sleep(30)
+    

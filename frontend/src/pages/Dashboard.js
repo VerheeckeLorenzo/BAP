@@ -63,10 +63,14 @@ export const Dashboard = () =>{
             </div>
             <div className="c-dashboard__item u-grid-2">
               <h2 className="c-dashboard__title">
-                Overview
+                About ChainGuard
               </h2>
               <p className="c-dashboard__value">
-                Test
+                ChainGuard is an innovative blockchain IoT application that empowers businesses to track, monitor, and ensure the integrity of their cargo shipments throughout the entire supply chain. 
+
+Leveraging the transparency and immutability of blockchain, combined with the real-time data collection capabilities of IoT devices, ChainGuard offers an unparalleled solution to address the challenges of cargo tracking and monitoring.
+
+- Lorenzo Verheecke
               </p>
             </div>
           </div>
